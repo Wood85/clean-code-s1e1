@@ -118,6 +118,8 @@ var taskCompleted=function(){
   var listItem=this.parentNode;
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
+	const label  = listItem.querySelector("label");
+	label.classList.add("completed-task");
 }
 
 var taskIncomplete=function(){
@@ -128,6 +130,8 @@ var taskIncomplete=function(){
   var listItem=this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem,taskCompleted);
+	const label  = listItem.querySelector("label");
+	label.classList.remove("completed-task");
 }
 
 var ajaxRequest=function(){
@@ -167,6 +171,7 @@ for (var i=0; i<incompleteTaskHolder.children.length;i++){
 for (var i=0; i<completedTasksHolder.children.length;i++){
   //bind events to list items chldren(tasksIncompleted)
   bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
+	
 }
 
 // Issues with usability don't get seen until they are in front of a human tester.
