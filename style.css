@@ -18,9 +18,9 @@ body {
 }
 
 @media (max-width:768px) {
-.header {
-	text-align: center;
-}
+  .header {
+	  text-align: center;
+  }
 }
 .todo {
   display: block;
@@ -45,7 +45,7 @@ body {
   list-style:none;
 }
 .input,
-.btn{
+.btn  {
   outline:none;
 }
 .btn {
